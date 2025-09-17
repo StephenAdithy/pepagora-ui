@@ -1,4 +1,8 @@
 import React from "react";
+import Imagepd from "../assets/images/imagepd.png";
+import SmallImg from "../assets/images/small-img.png";
+import CancelIcon from "../assets/icons/sidebar/cancel.svg";
+import Expand from "../assets/icons/ci_expand.svg";
 
 export default function PreviewPanel() {
   return (
@@ -28,7 +32,7 @@ export default function PreviewPanel() {
               style={{ transform: "rotate(-180deg)" }}
             >
               <img
-                src="src/assets/icons/sidebar/cancel.svg"
+                src={CancelIcon}
                 alt="icon"
                 className="w-[10px] h-[10px]"
               />
@@ -40,26 +44,24 @@ export default function PreviewPanel() {
           </div>
 
           <img
-            src="src/assets/icons/ci_expand.svg"
+            src={Expand}
             alt="Expand"
             className="w-[32px] h-[32px] cursor-pointer"
           />
         </div>
 
         <div className="flex flex-col gap-[8px]">
-          {/* Large Image */}
           <div
             className="rounded-lg border-gray-300"
             style={{ width: "100%", height: "278.23px" }}
           >
             <img
-              src="src/assets/images/imagepd.png"
+              src={Imagepd}
               alt="Large"
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
 
-          {/* Small Images */}
           <div className="flex flex-row gap-3">
             {Array.from({ length: 5 }).map((_, i) => (
               <div
@@ -68,7 +70,7 @@ export default function PreviewPanel() {
                 style={{ width: "100%", height: "auto" }}
               >
                 <img
-                  src={`src/assets/images/small-img.png`}
+                  src={SmallImg}
                   alt={`Small ${i + 1}`}
                   className="w-full h-full object-cover rounded-lg"
                 />

@@ -1,7 +1,14 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 import menu from "../assets/icons/menu.svg";
-import { Search, Mic, Image, Globe, Bell, User } from "lucide-react";
+import GlobeAlt from "../assets/icons/globe-alt.svg";
+import Flag from "../assets/icons/flag.svg";
+import CurrencyRupee from "../assets/icons/currency-rupee.svg";
+import Bell from "../assets/icons/bell.svg";
+import Rpg from "../assets/icons/rpg.svg";
+import UserCircle from "../assets/icons/user-circle.svg";
+import ArrowDown from "../assets/icons/arrowdown.svg";
+import { Search, Mic, Image,} from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -29,14 +36,14 @@ export default function Navbar() {
       <div className="flex items-center space-x-[12px]">
         <div className="flex items-center text-sm space-x-[4px] cursor-pointer">
           <img
-            src="src/assets/icons/globe-alt.svg"
+            src={GlobeAlt}
             alt="Globe"
             className="w-[24px] h-[24px]"
           />
           <div className="flex items-center text-sm space-x-[4px] cursor-pointer">
             <span>EN</span>
             <img
-              src="src/assets/icons/arrowdown.svg"
+              src={ArrowDown}
               alt="Down Arrow"
               className="w-[8px] h-[4px]"
             />
@@ -45,19 +52,19 @@ export default function Navbar() {
 
         <div className="flex items-center text-sm space-x-[4px] cursor-pointer max-768:hidden">
           <img
-            src="src/assets/icons/flag.svg"
+            src={Flag}
             alt="IN"
             className="w-[27px] h-[18px]"
           />
           <div className="flex items-center text-sm space-x-[4px] cursor-pointer">
             <span>IN</span>
             <img
-              src="src/assets/icons/currency-rupee.svg"
+              src={CurrencyRupee}
               alt="Down Arrow"
               className="w-[24px] h-[24px]"
             />
             <img
-              src="src/assets/icons/arrowdown.svg"
+              src={ArrowDown}
               alt="Down Arrow"
               className="w-[8px] h-[4px]"
             />
@@ -65,7 +72,7 @@ export default function Navbar() {
         </div>
 
         <img
-          src="src/assets/icons/bell.svg"
+          src={Bell}
           alt="Notifications"
           className="w-[24px] h-[24px] cursor-pointer max-768:hidden"
         />
@@ -75,14 +82,14 @@ export default function Navbar() {
         </button>
 
         <img
-          src="src/assets/icons/rpg.svg"
+          src={Rpg}
           alt="Notifications"
           className="w-[28px] h-[28px] cursor-pointer max-992:hidden max-768:hidden"
         />
 
         <div className="flex items-center space-x-1 cursor-pointer">
           <img
-            src="src/assets/icons/user-circle.svg"
+            src={UserCircle}
             alt="User"
             className="w-[30px] h-[30px]"
           />

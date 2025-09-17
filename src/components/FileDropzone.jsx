@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Icon from "../assets/icons/sidebar/document-copy.svg"
 
 export default function FileDropzone({
   label,
@@ -15,7 +16,7 @@ export default function FileDropzone({
 
       <div className="border-dashed border-2 border-gray-200 rounded p-4 pt-[34px] pb-[38px] flex flex-col items-center text-center  ">
         <img
-          src="src/assets/icons/sidebar/document-copy.svg"
+          src={Icon}
           alt="icon"
           className="w-[30px] h-[30px] mt-2 mb-[8px]"
         />

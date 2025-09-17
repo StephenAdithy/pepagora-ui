@@ -10,6 +10,9 @@ import BussinessIcon from "../assets/icons/sidebar/Bussiness-profile.svg";
 import videoplayIcon from "../assets/icons/sidebar/video-play.svg";
 import SupportIcon from "../assets/icons/sidebar/Support.svg";
 import SettingIcon from "../assets/icons/sidebar/Setting.svg";
+import Arrowleft from "../assets/icons/sidebar/Arrow-left.svg";
+import ExclamationIcon from "../assets/icons/sidebar/exclamation-circle.svg";
+import Arrowdown from "../assets/icons/arrowdown.svg";
 
 const steps = [
   {
@@ -91,7 +94,7 @@ export default function AddProductLayout() {
       <div className="flex-1 bg-white p-[56px] overflow-y-auto max-1440:p-[26px] max-992:px-[16px] max-992:py-[26px]">
         <h4 className="flex items-center font-medium text-gray-800 mb-4">
           <img
-            src="src/assets/icons/sidebar/Arrow-left.svg"
+            src={Arrowleft}
             alt="arrow"
             className="w-9 h-6 mr-2"
           />
@@ -111,7 +114,7 @@ export default function AddProductLayout() {
               <div className="flex flex-row gap-2">
                 {i === activeStep && (
                   <img
-                    src="src/assets/icons/sidebar/exclamation-circle.svg"
+                    src={ExclamationIcon}
                     alt="icon"
                     className="w-3 h-3 mt-2"
                   />
@@ -125,7 +128,7 @@ export default function AddProductLayout() {
               </div>
               {(i === 2 || i === 3) && (
                 <img
-                  src="src/assets/icons/arrowdown.svg"
+                  src={Arrowdown}
                   alt="arrow"
                   className="w-3 h-3 mt-1"
                 />

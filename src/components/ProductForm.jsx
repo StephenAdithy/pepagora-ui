@@ -3,6 +3,8 @@ import FileDropzone from "./FileDropzone";
 import FormField from "./FormField";
 import { Search } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import Layer from "../assets/icons/sidebar/Layer_1.svg";
+import Vector from "../assets/icons/sidebar/Vector.svg";
 
 export default function ProductForm() {
   const [productName, setProductName] = useState("");
@@ -13,7 +15,7 @@ export default function ProductForm() {
     <div className="bg-white relative pt-[56px] rounded-lg shadow-sm mt-[30px]">
       <h3 className="flex flex-row gap-[8px] px-[56px] mb-[29px] max-992:px-[26px]">
         <img
-          src="src/assets/icons/sidebar/Layer_1.svg"
+          src={Layer}
           alt="icon"
           className="w-[28px] h-[28px]"
         />
@@ -139,7 +141,7 @@ export default function ProductForm() {
         >
           <span>Continue</span>
           <img
-            src="src/assets/icons/sidebar/Vector.svg"
+            src={Vector}
             alt="icon"
             className="w-[16px] h-[16px]"
           />
