@@ -4,3 +4,9 @@
 
 /* small custom overrides */
 .body-bg { background: #f8fafb; } /* example */
+
+.hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+

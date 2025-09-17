@@ -34,69 +34,68 @@ const steps = [
 
 export default function AddProductLayout() {
   const activeStep = 0;
+
   return (
-    <div className="flex mt-[30px]">
+    <div className="flex h-screen">
       {/* Left Sidebar */}
-      <div className="flex flex-col items-center bg-white pt-[24px] min-h-screen justify-between w-[80px]">
+      <div className="flex flex-col bg-white w-[80px] pt-6 overflow-y-auto">
         {/* Top Section */}
         <div className="flex flex-col items-center">
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={HomeIcon} alt="home" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={InboxIcon} alt="product" className="w-6 h-6" />
           </button>
 
-          {/* Divider */}
-          <div className="w-[80px] border-t mb-[12px]"></div>
+          <div className="w-[80px] border-t mb-3"></div>
 
-          {/* Middle Group (5 icons) */}
-          <button className="py-[4px] px-[8px] py-[4px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={SalesIcon} alt="pricing" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={CatalogIcon} alt="shipping" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={MarketingIcon} alt="trade" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={SourcingIcon} alt="spec" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={AnalyticsIcon} alt="additional" className="w-6 h-6" />
           </button>
 
-          <div className="w-[80px] border-t mb-[12px]"></div>
+          <div className="w-[80px] border-t mb-3"></div>
 
-          {/* Middle Group (5 icons) */}
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={BussinessIcon} alt="pricing" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={videoplayIcon} alt="shipping" className="w-6 h-6" />
           </button>
 
-          <div className="w-[80px] border-t"></div>
+          <div className="w-[80px] border-t mb-3"></div>
         </div>
 
-        {/* Bottom Section (gap before last two icons) */}
-        <div className="flex flex-col items-center">
-          <button className="py-[4px] px-[8px] mb-4 rounded-lg text-gray-600 hover:bg-red-50">
+        {/* Bottom Section */}
+        <div className="flex flex-col items-center mt-auto mb-4">
+          <button className="py-1 px-2 mb-4 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={SupportIcon} alt="user" className="w-6 h-6" />
           </button>
-          <button className="py-[4px] px-[8px] mb-2 rounded-lg text-gray-600 hover:bg-red-50">
+          <button className="py-1 px-2 rounded-lg text-gray-600 hover:bg-red-50">
             <img src={SettingIcon} alt="settings" className="w-6 h-6" />
           </button>
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-[56px] shadow-sm sticky top-6">
-        <h4 className="flex items-center font-haas font-medium text-sidebar-title text-gray-800 mb-4">
+      {/* Main Content */}
+      <div className="flex-1 bg-white p-[56px] overflow-y-auto max-1440:p-[26px]">
+        <h4 className="flex items-center font-medium text-gray-800 mb-4">
           <img
             src="src/assets/icons/sidebar/Arrow-left.svg"
             alt="arrow"
-            className="w-[36px] h-[24px] mr-2"
+            className="w-9 h-6 mr-2"
           />
           Add Product
         </h4>
@@ -105,27 +104,25 @@ export default function AddProductLayout() {
           {steps.map((step, i) => (
             <li
               key={step.title}
-              className={`p-[24px] mb-[16px] rounded-2xl border flex justify-between items-start ${
+              className={`p-6 mb-4 rounded-2xl border flex justify-between items-start ${
                 i === activeStep
-                  ? "pl-[28px] border-gray-200 hover:bg-gray-50 border-black"
+                  ? "pl-7 border-black hover:bg-gray-50"
                   : "border-gray-200 hover:bg-gray-50"
               }`}
             >
-              <div className="flex flex-row gap-[8px]">
+              <div className="flex flex-row gap-2">
                 {i === activeStep && (
                   <img
-                    src="src/assets/icons/arrowdown.svg"
+                    src="src/assets/icons/sidebar/exclamation-circle.svg"
                     alt="icon"
                     className="w-3 h-3 mt-2"
                   />
                 )}
                 <div className="flex flex-col">
-                  <span className="font-medium text-[18px] leading-[28px] tracking-[0.01em] text-gray-800 align-middle">
+                  <span className="font-medium text-lg text-gray-800">
                     {step.title}
                   </span>
-                  <p className="font-haas font-[450] text-[14px] leading-[20px] tracking-[0.02em] text-gray-500 align-middle">
-                    {step.desc}
-                  </p>
+                  <p className="text-sm text-gray-500">{step.desc}</p>
                 </div>
               </div>
               {/* Add arrow icon if needed */}

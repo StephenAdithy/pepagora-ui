@@ -26,7 +26,7 @@ export default function FileDropzone({
           or
         </span>
 
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 max-1440:flex-wrap max-1440:justify-center">
           {buttons.map((btn, i) => {
             if (btn.type === "file") {
               return (

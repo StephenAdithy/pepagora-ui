@@ -6,26 +6,29 @@ import Navbar from "./components/Navigation";
 
 export default function App() {
   return (
-    <div className="h-[100%] bg-gray-50">
-      <Navbar />
+    <div className="h-screen bg-gray-50 flex flex-col">
+      {/* Navbar */}
+      <div className="h-16 w-full bg-white shadow">
+        <Navbar />
+      </div>
 
-      <div className="pt-16 max-w-[1920px] mx-auto grid grid-cols-[3.6fr_5.4fr_3fr] gap-[16px]">
-        
+      {/* Main Content */}
+      <div className="flex flex-1 overflow-hidden">
         {/* Fixed Sidebar */}
-        <aside >
+        <aside className="w-[540px] bg-white shadow flex-shrink-0 overflow-y-auto hide-scrollbar max-1440:w-[440px]">
           <Sidebar />
         </aside>
 
         {/* Scrollable Center */}
-        <main >
+        <main className="flex-1 overflow-y-auto px-6 py-0 hide-scrollbar">
           <ProductForm />
         </main>
 
         {/* Fixed Preview Panel */}
-        <aside>
+        <aside className="w-[450px] bg-white shadow flex-shrink-0 overflow-y-auto hide-scrollbar max-1440:w-[400px]">
           <PreviewPanel />
         </aside>
       </div>
-    </div>
-  );
+    </div>
+  );
 }

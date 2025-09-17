@@ -10,9 +10,16 @@ export default function ProductForm() {
   const [sku, setSku] = useState("");
 
   return (
-    <div className="bg-white px-[56px] pt-[56px] rounded-lg shadow-sm mt-[30px]">
-      <h3 className="text-lg font-semibold mb-[29px]">Product Information</h3>
-      <div className="space-y-6">
+    <div className="bg-white relative pt-[56px] rounded-lg shadow-sm mt-[30px]">
+      <h3 className="flex flex-row gap-[8px] px-[56px] mb-[29px]">
+        <img
+          src="src/assets/icons/sidebar/Layer_1.svg"
+          alt="icon"
+          className="w-[28px] h-[28px]"
+        />
+        <span className="text-lg font-semibold"> Product Information </span>
+      </h3>
+      <div className="space-y-6 px-[56px]">
         <FormField
           label="Product Name"
           name="productName"
@@ -122,15 +129,28 @@ export default function ProductForm() {
             <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
           </div>
         </div>
-
-        <div className="flex items-center justify-between pt-4">
-          <button className="px-4 py-2 rounded border">
-            Save & Continue Later
-          </button>
-          <button className="px-4 py-2 rounded bg-red-600 text-white">
-            Continue →
-          </button>
-        </div>
+      </div>
+      <div className="border border-solid p-[30px_20px] bg-white sticky z-[99] bottom-0 flex flex-row justify-end gap-4 pr-14">
+        <button
+          class=" h-10 min-h-10 flex items-center justify-center gap-2 
+         rounded-[56px] border border-gray-300 px-4 py-1 
+         font-[500] text-[14px] leading-[14px] tracking-[0.5px]"
+        >
+          <span>Save & Continue Later</span>
+        </button>
+        <button
+          class="w-[124px] h-10 min-h-10 flex items-center justify-center gap-2
+         rounded-[56px] px-4 py-1
+         font-neuehaas font-medium text-[14px] leading-[14px] tracking-[0.5px]
+         bg-[#D92C27] text-white"
+        >
+          <span>Continue</span>
+          <img
+            src="src/assets/icons/sidebar/Vector.svg"
+            alt="icon"
+            className="w-[16px] h-[16px]"
+          />
+        </button>
       </div>
     </div>
   );

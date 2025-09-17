@@ -21,7 +21,7 @@ export default function PreviewPanel() {
         </span>
       </div>
 
-      <div className="px-[60px] py-[22px]">
+      <div className="px-[60px] py-[22px] max-1440:px-[26px]">
         <div className="flex justify-between pb-6 items-center">
           {/* Left Side: Button + Preview */}
           <div className="flex items-center space-x-2">
@@ -29,7 +29,11 @@ export default function PreviewPanel() {
               className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FAFAFA] text-[13px]"
               style={{ transform: "rotate(-180deg)" }}
             >
-              x
+              <img
+                src="src/assets/icons/sidebar/cancel.svg"
+                alt="icon"
+                className="w-[10px] h-[10px]"
+              />
             </button>
 
             <span className="text-[20px] leading-[28px] tracking-[1%] font-neue-haas font-medium">
