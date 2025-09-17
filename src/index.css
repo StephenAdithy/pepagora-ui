@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* small custom overrides */
-.body-bg { background: #f8fafb; } /* example */
+.body-bg { background: #f8fafb; } 
 
 .hide-scrollbar {
     scrollbar-width: none;

@@ -37,7 +37,6 @@ export default function AddProductLayout() {
 
   return (
     <div className="flex h-screen">
-      {/* Left Sidebar */}
       <div className="flex flex-col bg-white w-[80px] pt-6 overflow-y-auto">
         {/* Top Section */}
         <div className="flex flex-col items-center">
@@ -89,8 +88,7 @@ export default function AddProductLayout() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 bg-white p-[56px] overflow-y-auto max-1440:p-[26px]">
+      <div className="flex-1 bg-white p-[56px] overflow-y-auto max-1440:p-[26px] max-992:px-[16px] max-992:py-[26px]">
         <h4 className="flex items-center font-medium text-gray-800 mb-4">
           <img
             src="src/assets/icons/sidebar/Arrow-left.svg"
@@ -104,7 +102,7 @@ export default function AddProductLayout() {
           {steps.map((step, i) => (
             <li
               key={step.title}
-              className={`p-6 mb-4 rounded-2xl border flex justify-between items-start ${
+              className={`p-6 mb-4 rounded-2xl border flex justify-between items-start max-992:px-[16px]${
                 i === activeStep
                   ? "pl-7 border-black hover:bg-gray-50"
                   : "border-gray-200 hover:bg-gray-50"
@@ -125,7 +123,6 @@ export default function AddProductLayout() {
                   <p className="text-sm text-gray-500">{step.desc}</p>
                 </div>
               </div>
-              {/* Add arrow icon if needed */}
               {(i === 2 || i === 3) && (
                 <img
                   src="src/assets/icons/arrowdown.svg"

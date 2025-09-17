@@ -8,11 +8,10 @@ export default function PreviewPanel() {
           Product information
         </span>
 
-        {/* Progress Bar */}
         <div className="w-full bg-gray-200 rounded-full h-[8px]">
           <div
             className="bg-[#89C949] h-3 rounded-full"
-            style={{ width: "30%", height: "8px" }} // 10% completed
+            style={{ width: "30%", height: "8px" }}
           ></div>
         </div>
 
@@ -21,9 +20,8 @@ export default function PreviewPanel() {
         </span>
       </div>
 
-      <div className="px-[60px] py-[22px] max-1440:px-[26px]">
+      <div className="px-[60px] py-[22px] max-1440:px-[18px]">
         <div className="flex justify-between pb-6 items-center">
-          {/* Left Side: Button + Preview */}
           <div className="flex items-center space-x-2">
             <button
               className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FAFAFA] text-[13px]"
@@ -41,7 +39,6 @@ export default function PreviewPanel() {
             </span>
           </div>
 
-          {/* Right Side: Image */}
           <img
             src="src/assets/icons/ci_expand.svg"
             alt="Expand"

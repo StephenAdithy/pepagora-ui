@@ -11,7 +11,7 @@ export default function ProductForm() {
 
   return (
     <div className="bg-white relative pt-[56px] rounded-lg shadow-sm mt-[30px]">
-      <h3 className="flex flex-row gap-[8px] px-[56px] mb-[29px]">
+      <h3 className="flex flex-row gap-[8px] px-[56px] mb-[29px] max-992:px-[26px]">
         <img
           src="src/assets/icons/sidebar/Layer_1.svg"
           alt="icon"
@@ -19,7 +19,7 @@ export default function ProductForm() {
         />
         <span className="text-lg font-semibold"> Product Information </span>
       </h3>
-      <div className="space-y-6 px-[56px]">
+      <div className="space-y-6 px-[56px] max-992:px-[26px]">
         <FormField
           label="Product Name"
           name="productName"
@@ -47,12 +47,10 @@ export default function ProductForm() {
         />
 
         <div className="mb-4">
-          {/* Label */}
           <label className="block font-neue-haas font-medium text-[14px] leading-[150%] tracking-[0.015em] mb-[8px]">
             Category
           </label>
 
-          {/* Input wrapper */}
           <div className="relative">
             <select
               className="w-full border border-gray-300 rounded-md pl-3 pr-10 py-2 text-sm text-gray-700 
@@ -67,11 +65,9 @@ export default function ProductForm() {
               <option value="home">Home & Kitchen</option>
             </select>
 
-            {/* Search Icon */}
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
           </div>
 
-          {/* Hint text */}
           <p className="mt-1 text-xs text-gray-400">
             Select your product category
           </p>
@@ -105,12 +101,10 @@ export default function ProductForm() {
         />
 
         <div className="mb-4">
-          {/* Label */}
           <label className="block font-neue-haas font-medium text-[14px] leading-[150%] tracking-[0.015em] mb-[8px]">
             Country of Origin
           </label>
 
-          {/* Select wrapper */}
           <div className="relative">
             <select
               className="w-full border border-gray-300 rounded-md pl-3 pr-10 py-2 text-sm text-gray-700
@@ -125,7 +119,6 @@ export default function ProductForm() {
               <option value="germany">Germany</option>
             </select>
 
-            {/* Custom Arrow (replaces default) */}
             <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
           </div>
         </div>
