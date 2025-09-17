@@ -14,11 +14,7 @@ export default function ProductForm() {
   return (
     <div className="bg-white relative pt-[56px] rounded-lg shadow-sm mt-[30px]">
       <h3 className="flex flex-row gap-[8px] px-[56px] mb-[29px] max-992:px-[26px]">
-        <img
-          src={Layer}
-          alt="icon"
-          className="w-[28px] h-[28px]"
-        />
+        <img src={Layer} alt="icon" className="w-[28px] h-[28px]" />
         <span className="text-lg font-semibold"> Product Information </span>
       </h3>
       <div className="space-y-6 px-[56px] max-992:px-[26px]">
@@ -38,6 +34,8 @@ export default function ProductForm() {
           onChange={(e) => setShortDesc(e.target.value)}
           placeholder="Enter text"
           textarea
+          showAIButton={true}
+          onAIButtonClick={() => console.log("AI Styles clicked!")}
         />
 
         <FormField
@@ -102,7 +100,7 @@ export default function ProductForm() {
           buttons={[{ text: "Choose File", type: "file" }]}
         />
 
-        <div className="mb-4">
+        <div className="mb-4 pb-[20px]">
           <label className="block font-neue-haas font-medium text-[14px] leading-[150%] tracking-[0.015em] mb-[8px]">
             Country of Origin
           </label>
@@ -140,11 +138,7 @@ export default function ProductForm() {
          bg-[#D92C27] text-white"
         >
           <span>Continue</span>
-          <img
-            src={Vector}
-            alt="icon"
-            className="w-[16px] h-[16px]"
-          />
+          <img src={Vector} alt="icon" className="w-[16px] h-[16px]" />
         </button>
       </div>
     </div>
